@@ -1,0 +1,17 @@
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'esp32'
+
+    
+    # Override the global default and scrape targets from this job every 5 seconds.
+    scrape_interval: 5s
+
+    static_configs:
+      - targets: ['192.168.0.250:80']
+
+    metrics_path: /
+
+
+
+rule_files:
+  - "./test.rules.yml"

@@ -1,0 +1,5 @@
+groups:
+  - name: example
+    rules:
+    - record: actual_value
+      expr: actual_value
